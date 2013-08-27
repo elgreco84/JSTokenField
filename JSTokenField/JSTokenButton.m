@@ -45,8 +45,9 @@
 	[button setHighlightedBg:[[UIImage imageNamed:@"tokenHighlighted.png"] stretchableImageWithLeftCapWidth:14 topCapHeight:0]];
 	[button setAdjustsImageWhenHighlighted:NO];
 	[button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    
+    [button.titleLabel setLineBreakMode:NSLineBreakByTruncatingTail];
 	[[button titleLabel] setFont:[UIFont fontWithName:@"Helvetica Neue" size:15]];
-	[[button titleLabel] setLineBreakMode:UILineBreakModeTailTruncation];
 	[button setTitleEdgeInsets:UIEdgeInsetsMake(2, 10, 0, 10)];
 	
 	[button setTitle:string forState:UIControlStateNormal];
@@ -85,7 +86,6 @@
 	self.representedObject = nil;
 	self.highlightedBg = nil;
 	self.normalBg = nil;
-    [super dealloc];
 }
 
 - (BOOL)becomeFirstResponder {
